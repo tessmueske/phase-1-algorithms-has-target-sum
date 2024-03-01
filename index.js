@@ -1,17 +1,31 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
+  }
+  return false
 }
 
 /* 
-  Write the Big O time complexity of your function here
+Nested loops have a Big O Notation of O(n^2).
 */
 
 /* 
-  Add your pseudocode here
-*/
+pseudocode:
+
+check if any two numbers add up to the target number. if two such numbers
+exist, return true; if not, return false.
+
+*/   
 
 /*
-  Add written explanation of your solution here
+  I am writing a function called hasTargetSum that uses nested for loops.
+  The outer loop tests if the variable i is less than the length of the 
+  array. This loop is responsible for iterating through the array. The inner
+  loop is also iterating through the array, but avoiding the same number (i).
 */
 
 // You can run `node index.js` to view these console logs
